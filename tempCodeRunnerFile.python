@@ -1,0 +1,15 @@
+"""
+[20:27:12] [Netty Client IO #1/INFO]: [CHAT]  7[5?]  a[VIP] podaxela f: ur skin is so cool :D [?]
+[20:27:15] [Netty Client IO #1/INFO]: [CHAT]  b[MVP 3+ b] lofi f  6joined the lobby! [?]
+[20:27:18] [Netty Client IO #1/INFO]: [CHAT]  b[MVP a+ b] MrMastr f  6joined the lobby! [?]
+[21:31:17] [Netty Local Client IO #0/INFO]: [CHAT] <oofish> obcd [?]
+"""
+line = "[15:36:32] [Netty Client IO #9/INFO]: [CHAT] Friend > qTxddy left. [?]"
+if "/INFO]: " in line:
+    lines = line.split("/INFO]: ")
+    if len(lines) >= 1:
+        line = lines[1]
+        print(line)
+    
+if "obcd" in line:
+    print('obcd detected')

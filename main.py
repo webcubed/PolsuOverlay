@@ -127,7 +127,7 @@ if __name__ == '__main__':
         sys.exit(app.exec_())
     else:
         logger.info("-----------------------------------------------------------------------------------------------------")
-        logger.info(f"Polsu Overlay - {datetime.datetime.utcnow().strftime('%d/%m/%Y %H:%M:%S')}")
+        logger.info(f"Polsu Overlay - {datetime.datetime.now(datetime.timezone.utc).strftime('%d/%m/%Y %H:%M:%S')}")
         logger.info(f"Python version: {sys.version}")
         logger.info(f"OS: {sys.platform}")
         logger.info(f"Running in: {'Development' if DEV_MODE else 'Production'} mode")
